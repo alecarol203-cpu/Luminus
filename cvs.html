@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luminus — Tu página web profesional lista en 48 horas | Toda Argentina</title>
-<meta name="description" content="Páginas web profesionales para emprendimientos de toda Argentina. Listas en menos de 48 horas, con dominio y hosting incluidos. $150.000 o 2 cuotas sin recargo.">
+<title>Luminus — CVs y LinkedIn con IA | Conseguí más entrevistas</title>
+<meta name="description" content="Optimizamos tu CV y tu perfil de LinkedIn con inteligencia artificial para que superes los filtros automáticos y consigas más entrevistas.">
 <link rel="icon" href="assets/logo.png?v=20260919">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -750,49 +750,6 @@
     .laptop-mock{ max-width: 280px; margin: 0 auto; }
     .cursor-dot, .cursor-ring{ display:none; }
   }
-
-  /* ---------- landing v2: cupos, trabajos, proceso, faq ---------- */
-  .cupos-badge{ display:inline-flex; align-items:center; gap:10px; margin: 22px auto 0; padding: 9px 18px; border-radius: 100px;
-    background: rgba(255,196,77,0.08); border: 1px solid rgba(255,196,77,0.35); color: #ffd98a; font-weight: 700; font-size: 0.92rem;
-    animation: rise 1s 0.38s var(--ease) both; }
-  .cupos-badge strong{ color:#fff; }
-  .cupos-dot{ width:9px; height:9px; border-radius:50%; background:#ffc44d; box-shadow: 0 0 0 0 rgba(255,196,77,0.6); animation: cupos-pulse 2s infinite; flex:none; }
-  @keyframes cupos-pulse{ 0%{ box-shadow:0 0 0 0 rgba(255,196,77,0.55);} 70%{ box-shadow:0 0 0 10px rgba(255,196,77,0);} 100%{ box-shadow:0 0 0 0 rgba(255,196,77,0);} }
-  .price-card .cupos-line{ margin-top: 12px; text-align:center; color:#ffd98a; font-weight:700; font-size:0.9rem; }
-  .section-cta{ text-align:center; margin-top: 40px; }
-  .section-cta .btn-primary{ display:inline-flex; }
-  .section-cta small{ display:block; margin-top: 12px; color: var(--muted-2); font-size: 0.86rem; }
-
-  .work-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px; max-width: var(--maxw); margin: 0 auto; }
-  .work-card{ display:flex; flex-direction:column; background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); overflow:hidden;
-    color: var(--text); text-decoration:none; transition: transform .35s var(--ease), border-color .35s, box-shadow .35s; }
-  .work-card:hover{ transform: translateY(-6px); border-color: rgba(139,111,245,0.5); box-shadow: 0 30px 60px -24px rgba(139,111,245,0.45); }
-  .work-card img{ width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; display:block; border-bottom:1px solid var(--line); }
-  .work-body{ padding: 18px 20px 22px; }
-  .work-body h3{ font-size: 1.05rem; }
-  .work-body p{ color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
-  .work-link{ display:inline-flex; align-items:center; gap:6px; margin-top: 12px; color: var(--blue); font-weight: 700; font-size: 0.9rem; }
-
-  .steps{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: var(--maxw); margin: 0 auto; counter-reset: step; }
-  .step{ position:relative; background: linear-gradient(165deg, #1c1938, var(--surface-2) 60%); border:1px solid var(--line); border-radius: var(--radius); padding: 30px 26px 28px; }
-  .step-num{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background: var(--grad);
-    color:#0a0716; font-family:'Unbounded',sans-serif; font-weight:800; font-size:1.05rem; margin-bottom: 16px; }
-  .step h3{ font-size: 1.1rem; }
-  .step p{ color: var(--muted); margin-top: 10px; font-size: 0.95rem; line-height: 1.55; }
-
-  .faq-list{ max-width: 780px; margin: 0 auto; display:flex; flex-direction:column; gap: 12px; }
-  .faq-list details{ background: var(--surface); border:1px solid var(--line); border-radius: 16px; padding: 0 22px; transition: border-color .3s; }
-  .faq-list details[open]{ border-color: rgba(139,111,245,0.45); }
-  .faq-list summary{ cursor:pointer; list-style:none; padding: 18px 0; font-weight: 800; font-size: 1rem; display:flex; justify-content:space-between; align-items:center; gap: 16px; }
-  .faq-list summary::-webkit-details-marker{ display:none; }
-  .faq-list summary::after{ content:'+'; font-size: 1.4rem; color: var(--blue); transition: transform .3s; flex:none; }
-  .faq-list details[open] summary::after{ transform: rotate(45deg); }
-  .faq-list details p{ color: var(--muted); padding-bottom: 18px; line-height: 1.6; font-size: 0.96rem; }
-  .footer-cv{ color: var(--muted); font-size: 0.88rem; }
-  .footer-cv a{ color: var(--blue); }
-  @media (max-width: 900px){
-    .work-grid, .steps{ grid-template-columns: 1fr; max-width: 460px; }
-  }
 </style>
 
 <!-- Meta Pixel Code -->
@@ -826,17 +783,16 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
 
 <header id="siteHeader">
   <div class="wrap">
-    <a href="#inicio" class="brand">
+    <a href="index.html" class="brand">
       <img src="assets/logo-badge.png?v=20260919" alt="Luminus Agencia IA">
       <span class="brand-text"><strong>Luminus</strong><em>Agencia IA</em></span>
     </a>
     <nav id="main-nav">
-      <a href="#trabajos">Trabajos</a>
-      <a href="#webs">Precio</a>
-      <a href="#proceso">Cómo trabajamos</a>
-      <a href="#faq">Preguntas</a>
+      <a href="index.html">Páginas web</a>
+      <a href="#cvs">CVs con IA</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-    <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="nav-cta" id="navCtaDesktop" target="_blank" rel="noopener">Quiero mi página web</a>
+    <a href="https://wa.me/5493416514065?text=Hola%2C%20quiero%20info%20sobre%20la%20revisi%C3%B3n%20de%20CV%20y%20LinkedIn" class="nav-cta" id="navCtaDesktop" target="_blank" rel="noopener">Quiero mejorar mi CV</a>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -845,333 +801,79 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
 
 <div class="nav-scrim" id="navScrim"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="#trabajos">Trabajos</a>
-  <a href="#webs">Precio</a>
-  <a href="#proceso">Cómo trabajamos</a>
-  <a href="#faq">Preguntas</a>
-  <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="nav-cta" target="_blank" rel="noopener">Quiero mi página web</a>
+  <a href="index.html">Páginas web</a>
+  <a href="#cvs">CVs con IA</a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
-<section class="hero" id="inicio">
-  <div class="hero-spotlight" id="heroSpotlight"></div>
-  <svg class="circuit-svg parallax-el" data-depth="-0.05" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+<section id="cvs" style="padding-top:140px;">
+  <svg class="section-circuit" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <defs>
-      <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient id="lineGrad3" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#4fc3f7"/>
         <stop offset="55%" stop-color="#8b6ff5"/>
         <stop offset="100%" stop-color="#d9a6e8"/>
       </linearGradient>
     </defs>
-    <path d="M 220 560 L 220 460 L 320 400 L 440 400" stroke="url(#lineGrad)"/>
-    <path d="M 260 620 L 340 620 L 400 570 L 480 570" stroke="url(#lineGrad)"/>
-    <path d="M 980 160 L 980 260 L 880 320 L 760 320 L 720 360" stroke="url(#lineGrad)"/>
-    <path d="M 940 100 L 860 100 L 800 150" stroke="url(#lineGrad)"/>
-    <path d="M 300 130 L 380 130 L 430 180" stroke="url(#lineGrad)"/>
-    <path d="M 900 600 L 820 600 L 780 560 L 720 560" stroke="url(#lineGrad)"/>
-    <circle cx="440" cy="400" r="5" fill="#4fc3f7"/>
-    <circle cx="220" cy="460" r="4" fill="#8b6ff5"/>
-    <circle cx="480" cy="570" r="4" fill="#d9a6e8"/>
-    <circle cx="760" cy="320" r="5" fill="#8b6ff5"/>
-    <circle cx="720" cy="360" r="4" fill="#d9a6e8"/>
-    <circle cx="800" cy="150" r="4" fill="#4fc3f7"/>
-    <circle cx="430" cy="180" r="4" fill="#4fc3f7"/>
-    <circle cx="720" cy="560" r="5" fill="#d9a6e8"/>
-  </svg>
-
-  <img src="assets/logo-badge.png?v=20260919" alt="Luminus — Agencia IA" class="hero-logo parallax-el" data-depth="0.12">
-  <span class="hero-tag">Diseño web profesional · Toda Argentina</span>
-  <h1>Tu página web profesional,<br><span class="grad-text">lista en menos de 48 horas.</span></h1>
-  <p class="sub">Con dominio y hosting incluidos, diseño a medida de tu marca y cambios a tu gusto hasta que quede como la imaginás. <strong style="color:var(--text)">$150.000</strong> o 2 cuotas sin recargo.</p>
-  <p class="cupos-badge"><span class="cupos-dot"></span><span>Solo <strong>8 proyectos por mes</strong> · <span data-cupos-text>Quedan 8 cupos este mes</span></span></p>
-  <div class="hero-ctas">
-    <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a>
-    <a href="#trabajos" class="btn-secondary">Ver trabajos y precio</a>
-  </div>
-  <div class="scroll-cue"><span>Descubrí más</span><span class="chev"></span></div>
-</section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="marqueeTrack">
-    <span>Lista en menos de 48 hs</span><span>Dominio y hosting incluidos</span><span>Diseño a medida</span><span>Cambios a tu gusto</span><span>Toda Argentina</span>
-    <span>Lista en menos de 48 hs</span><span>Dominio y hosting incluidos</span><span>Diseño a medida</span><span>Cambios a tu gusto</span><span>Toda Argentina</span>
-  </div>
-</div>
-
-<section>
-  <svg class="section-circuit" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <linearGradient id="lineGrad1b" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#4fc3f7"/>
-        <stop offset="55%" stop-color="#8b6ff5"/>
-        <stop offset="100%" stop-color="#d9a6e8"/>
-      </linearGradient>
-    </defs>
-    <path d="M 30 40 L 110 40 L 160 90 L 240 90" stroke="url(#lineGrad1b)"/>
-    <path d="M 1170 360 L 1090 360 L 1040 310 L 960 310" stroke="url(#lineGrad1b)"/>
-    <path d="M 1180 50 L 1100 50 L 1050 100" stroke="url(#lineGrad1b)"/>
-    <path d="M 20 350 L 100 350 L 150 300" stroke="url(#lineGrad1b)"/>
-    <circle cx="240" cy="90" r="4" fill="#4fc3f7"/>
-    <circle cx="960" cy="310" r="4" fill="#d9a6e8"/>
-    <circle cx="1050" cy="100" r="4" fill="#8b6ff5"/>
-    <circle cx="150" cy="300" r="4" fill="#d9a6e8"/>
-  </svg>
-  <div class="wrap hook-centered reveal">
-    <span class="eyebrow-dot" style="justify-content:center;">El problema real</span>
-    <h2>¿Tenés un emprendimiento y no estás posicionado online?</h2>
-    <p>Cada día, alguien busca lo que vos vendés y encuentra a otro en su lugar. Sin una página propia, tu negocio no tiene dónde mostrarse, y el cliente sigue de largo hacia la competencia. Tenemos una propuesta pensada para que eso deje de pasar.</p>
-    <div class="section-cta"><a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a></div>
-  </div>
-</section>
-
-<section id="trabajos">
-  <div class="wrap">
-    <div style="text-align:center; max-width:680px; margin: 0 auto 40px;" class="reveal">
-      <span class="eyebrow-dot" style="display:flex; justify-content:center;">Trabajos reales</span>
-      <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem);">Páginas que ya están online</h2>
-      <p style="color:var(--muted); margin-top:16px;">Entrá y miralas funcionando. Así puede quedar la tuya.</p>
-    </div>
-    <div class="work-grid">
-      <a class="work-card reveal" href="https://www.verovende.com.ar" target="_blank" rel="noopener">
-        <img src="assets/trabajo-verovende.jpg?v=20260927" alt="Página web de Vero Vende" loading="lazy">
-        <div class="work-body"><h3>Vero Vende</h3><p>Compra y venta de objetos · Rosario</p><span class="work-link">verovende.com.ar ↗</span></div>
-      </a>
-      <a class="work-card reveal" href="https://clementelavanderia.com.ar" target="_blank" rel="noopener">
-        <img src="assets/trabajo-clemente.jpg?v=20260927" alt="Página web de Clemente Lavandería" loading="lazy">
-        <div class="work-body"><h3>Clemente Lavandería</h3><p>Lavandería y tintorería · Rosario</p><span class="work-link">clementelavanderia.com.ar ↗</span></div>
-      </a>
-      <a class="work-card reveal" href="https://jedisdelsur.com.ar" target="_blank" rel="noopener">
-        <img src="assets/trabajo-jedisdelsur.jpg?v=20260927" alt="Página web de Jedis del Sur" loading="lazy">
-        <div class="work-body"><h3>Jedis del Sur</h3><p>Tienda online · Envíos a todo el país</p><span class="work-link">jedisdelsur.com.ar ↗</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="webs">
-  <svg class="section-circuit" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <linearGradient id="lineGrad2" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#4fc3f7"/>
-        <stop offset="55%" stop-color="#8b6ff5"/>
-        <stop offset="100%" stop-color="#d9a6e8"/>
-      </linearGradient>
-    </defs>
-    <path d="M 20 60 L 100 60 L 150 110 L 220 110" stroke="url(#lineGrad2)"/>
-    <path d="M 0 420 L 80 420 L 130 370 L 260 370 L 310 420" stroke="url(#lineGrad2)"/>
-    <path d="M 1180 90 L 1100 90 L 1050 140 L 960 140" stroke="url(#lineGrad2)"/>
-    <path d="M 1200 440 L 1120 440 L 1070 390 L 940 390" stroke="url(#lineGrad2)"/>
-    <path d="M 560 40 L 560 90 L 610 130" stroke="url(#lineGrad2)"/>
-    <path d="M 640 460 L 640 410 L 690 380" stroke="url(#lineGrad2)"/>
-    <circle cx="220" cy="110" r="4" fill="#4fc3f7"/>
-    <circle cx="310" cy="420" r="4" fill="#d9a6e8"/>
-    <circle cx="960" cy="140" r="4" fill="#8b6ff5"/>
-    <circle cx="940" cy="390" r="4" fill="#d9a6e8"/>
-    <circle cx="610" cy="130" r="4" fill="#4fc3f7"/>
-    <circle cx="690" cy="380" r="4" fill="#8b6ff5"/>
+    <path d="M 10 100 L 90 100 L 140 150 L 220 150" stroke="url(#lineGrad3)"/>
+    <path d="M 1190 600 L 1110 600 L 1060 550 L 980 550" stroke="url(#lineGrad3)"/>
+    <path d="M 1160 130 L 1080 130 L 1030 170 L 950 170" stroke="url(#lineGrad3)"/>
+    <path d="M 40 620 L 120 620 L 170 570 L 260 570" stroke="url(#lineGrad3)"/>
+    <path d="M 600 30 L 600 80 L 650 120" stroke="url(#lineGrad3)"/>
+    <circle cx="220" cy="150" r="4" fill="#4fc3f7"/>
+    <circle cx="980" cy="550" r="4" fill="#d9a6e8"/>
+    <circle cx="950" cy="170" r="4" fill="#8b6ff5"/>
+    <circle cx="260" cy="570" r="4" fill="#d9a6e8"/>
+    <circle cx="650" cy="120" r="4" fill="#4fc3f7"/>
   </svg>
   <div class="wrap">
-    <div style="text-align:center; max-width:680px; margin: 0 auto 34px;" class="reveal">
-      <span class="eyebrow-dot" style="justify-content:center;">Nuestra propuesta</span>
-      <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem);">Páginas web para tu negocio o emprendimiento</h2>
+    <div class="cv-hook reveal">
+      <span class="eyebrow-dot">CVs y LinkedIn con IA</span>
+      <h2>¿Enviás y enviás tu CV pero nadie te llama?</h2>
+      <p>Tiene una explicación: hoy ya casi no hay una persona revisando currículum por currículum. Son sistemas de inteligencia artificial los que filtran, según ciertos datos, a los candidatos que pasan a la siguiente etapa. Nosotros usamos IA también, para ayudarte a destacar y superar esos filtros.</p>
+      <span class="disclaimer">No te podemos prometer que consigas el trabajo, pero sí que vas a poder conseguir entrevistas.</span>
     </div>
-    <div class="pricing-inner">
-      <div class="price-card reveal tilt-el" data-tilt="8">
-        <h3>Sitio web a medida</h3>
-        <p class="tag">Ideal para negocios, emprendimientos y profesionales que quieren empezar a vender online.</p>
-        <div class="price-row">
-          <span class="price-old">$250.000</span>
-          <span class="price-new grad-text">$150.000</span>
-          <span class="price-note">(o 2 cuotas de $75.000 sin recargo)</span>
-        </div>
-        <p class="price-note">Precio de lanzamiento · Solo 8 proyectos por mes.</p>
-        <ul class="feature-list">
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> <strong>Lista en menos de 48 horas</strong></li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Cambios a tu gusto hasta que quede como la imaginás</li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Registro de dominio incluido</li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Hosting incluido</li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Diseño a medida de tu marca</li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Adaptada a celulares y computadoras</li>
-          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Botón directo a tu WhatsApp</li>
+
+    <div class="cv-offer reveal">
+      <div>
+        <h3 style="font-size:1.3rem; margin-bottom:20px;">Qué incluye el servicio</h3>
+        <ul>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b6ff5" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Revisión completa de tu cuenta de LinkedIn</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b6ff5" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Revisión y edición de tu CV con IA</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b6ff5" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Asesoramiento para que tu LinkedIn haga match con tu CV frente a un reclutador</li>
         </ul>
-        <div class="maintenance">
-          <strong>¿Vas a necesitar hacer cambios más adelante?</strong> Ofrecemos un plan de mantenimiento mensual por $30.000 para actualizar precios, imágenes y contenido. Si preferís manejarlo vos, te entregamos el sitio listo para promocionar tu marca desde el primer día.
-        </div>
-        <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a>
-        <p class="cupos-line"><span data-cupos-text>Quedan 8 cupos este mes</span></p>
       </div>
-      <svg class="laptop-mock reveal parallax-el tilt-el" data-tilt="6" data-depth="-0.03" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:100%; height:auto;">
-        <defs>
-          <linearGradient id="lapGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#4fc3f7"/>
-            <stop offset="55%" stop-color="#8b6ff5"/>
-            <stop offset="100%" stop-color="#d9a6e8"/>
-          </linearGradient>
-          <linearGradient id="lapBase" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#e7e6ee"/>
-            <stop offset="100%" stop-color="#c7c5d6"/>
-          </linearGradient>
-          <clipPath id="screenClip">
-            <rect x="56" y="42" width="528" height="282" rx="6"/>
-          </clipPath>
-          <clipPath id="lapLogoClip">
-            <circle cx="320" cy="126" r="32"/>
-          </clipPath>
-          <clipPath id="lapNavLogoClip">
-            <circle cx="77" cy="59" r="11"/>
-          </clipPath>
-        </defs>
-
-        <!-- shadow -->
-        <ellipse cx="320" cy="458" rx="250" ry="14" fill="#000" opacity="0.4"/>
-
-        <!-- keyboard base -->
-        <path d="M 20 372 L 620 372 L 588 428 L 52 428 Z" fill="url(#lapBase)" stroke="rgba(0,0,0,0.15)"/>
-        <path d="M 295 424 Q 320 431 345 424" stroke="#9a97ac" stroke-width="1.6" fill="none" opacity="0.7"/>
-        <rect x="40" y="364" width="560" height="8" rx="3" fill="#050506"/>
-
-        <!-- screen bezel -->
-        <rect x="40" y="16" width="560" height="352" rx="20" fill="#050506" stroke="rgba(150,140,220,0.28)" stroke-width="1.5"/>
-        <circle cx="320" cy="29" r="2.4" fill="#2c2a3d"/>
-
-        <!-- screen content (clipped) -->
-        <g clip-path="url(#screenClip)">
-          <rect x="56" y="42" width="528" height="282" fill="#07060f"/>
-
-          <!-- header -->
-          <rect x="56" y="42" width="528" height="30" fill="#0d0c1f"/>
-          <circle cx="77" cy="57" r="11" fill="url(#lapGrad)"/>
-          <image href="assets/logo-badge.png?v=20260919" xlink:href="assets/logo-badge.png?v=20260919" x="66" y="46" width="22" height="22" clip-path="url(#lapNavLogoClip)"/>
-          <text x="94" y="55" font-family="Unbounded, sans-serif" font-weight="700" font-size="8" fill="#f4f2fb">Luminus</text>
-          <text x="94" y="63" font-family="Manrope, sans-serif" font-weight="600" font-size="4.2" fill="#4fc3f7" letter-spacing="0.5">AGENCIA IA</text>
-          <text x="245" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Trabajos</text>
-          <text x="305" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Precio</text>
-          <text x="358" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Proceso</text>
-          <text x="418" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Preguntas</text>
-          <rect x="466" y="49" width="104" height="16" rx="8" fill="url(#lapGrad)"/>
-          <text x="518" y="60" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="4.6" fill="#0a0716">Quiero mi página web</text>
-
-          <!-- hero -->
-          <circle cx="320" cy="126" r="42" fill="url(#lapGrad)" opacity="0.22"/>
-          <circle cx="320" cy="126" r="32" fill="url(#lapGrad)"/>
-          <image href="assets/logo-badge.png?v=20260919" xlink:href="assets/logo-badge.png?v=20260919" x="288" y="94" width="64" height="64" clip-path="url(#lapLogoClip)"/>
-          <rect x="256" y="166" width="128" height="13" rx="6.5" fill="rgba(150,140,220,0.16)" stroke="rgba(150,140,220,0.35)" stroke-width="0.6"/>
-          <text x="320" y="175" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="4.6" fill="#f4f2fb">Diseño web profesional</text>
-          <text x="320" y="198" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">Tu página web</text>
-          <text x="320" y="215" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">profesional,</text>
-          <text x="320" y="232" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">lista en menos</text>
-          <text x="320" y="253" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="url(#lapGrad)">de 48 horas.</text>
-
-          <path d="M 90 90 L 130 90 L 155 115" stroke="url(#lapGrad)" stroke-width="1" fill="none" stroke-dasharray="3 5" opacity="0.6"/>
-          <path d="M 550 100 L 510 100 L 485 125" stroke="url(#lapGrad)" stroke-width="1" fill="none" stroke-dasharray="3 5" opacity="0.6"/>
-          <circle cx="155" cy="115" r="2.6" fill="#4fc3f7"/>
-          <circle cx="485" cy="125" r="2.6" fill="#d9a6e8"/>
-        </g>
-        <rect x="56" y="42" width="528" height="282" rx="6" fill="none" stroke="rgba(150,140,220,0.25)" stroke-width="1"/>
-      </svg>
+      <div class="cv-price-box">
+        <p class="price-note">Ambos servicios</p>
+        <p class="price-new grad-text">$65.000</p>
+        <p>Pago único</p>
+        <a href="https://wa.me/5493416514065?text=Hola%2C%20quiero%20info%20sobre%20la%20revisi%C3%B3n%20de%20CV%20y%20LinkedIn" class="btn-primary" target="_blank" rel="noopener">Quiero mejorar mi CV</a>
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="proceso">
-  <div class="wrap">
-    <div style="text-align:center; max-width:680px; margin: 0 auto 40px;" class="reveal">
-      <span class="eyebrow-dot" style="display:flex; justify-content:center;">Cómo trabajamos</span>
-      <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem);">Tu web online en 3 pasos</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><span class="step-num">1</span><h3>Nos contás de tu negocio</h3><p>Por WhatsApp, en una charla corta: qué vendés, a quién le vendés y cómo te imaginás tu página.</p></div>
-      <div class="step reveal"><span class="step-num">2</span><h3>En menos de 48 hs ves tu web</h3><p>Te mostramos el diseño funcionando, con tu logo, tus colores, tus textos y tus fotos.</p></div>
-      <div class="step reveal"><span class="step-num">3</span><h3>Ajustamos y publicamos</h3><p>Hacemos los cambios que quieras hasta que te encante y la dejamos online con tu dominio.</p></div>
-    </div>
-    <div class="section-cta"><a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Reservar mi cupo</a><small data-cupos-text>Quedan 8 cupos este mes</small></div>
-  </div>
-</section>
-
-<section id="testimonios">
-  <svg class="section-circuit" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <linearGradient id="lineGrad5" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#4fc3f7"/>
-        <stop offset="55%" stop-color="#8b6ff5"/>
-        <stop offset="100%" stop-color="#d9a6e8"/>
-      </linearGradient>
-    </defs>
-    <path d="M 0 70 L 80 70 L 130 120 L 200 120" stroke="url(#lineGrad5)"/>
-    <path d="M 1200 430 L 1120 430 L 1070 380 L 1000 380" stroke="url(#lineGrad5)"/>
-    <path d="M 1190 60 L 1110 60 L 1060 110" stroke="url(#lineGrad5)"/>
-    <path d="M 10 440 L 90 440 L 140 390" stroke="url(#lineGrad5)"/>
-    <circle cx="200" cy="120" r="4" fill="#4fc3f7"/>
-    <circle cx="1000" cy="380" r="4" fill="#d9a6e8"/>
-    <circle cx="1060" cy="110" r="4" fill="#8b6ff5"/>
-    <circle cx="140" cy="390" r="4" fill="#d9a6e8"/>
-  </svg>
-  <div class="wrap">
-    <div style="text-align:center; max-width:640px; margin: 0 auto 44px;" class="reveal">
-      <span class="eyebrow-dot" style="justify-content:center;">Clientes reales</span>
-      <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem);">Emprendimientos que ya dieron el salto</h2>
-    </div>
-  </div>
-  <div class="wrap carousel-wrap">
-    <div class="carousel" id="carousel">
-      <div class="test-card reveal">
-        <div class="video-frame">
-          <video src="assets/testimonio-verovende.mp4?v=20260927" poster="assets/poster-verovende.jpg?v=20260927" controls playsinline preload="metadata"></video>
-          <div class="play-badge"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="rgba(7,6,15,0.55)" stroke="url(#lineGrad5)" stroke-width="1.5"/><path d="M26 21 L45 32 L26 43 Z" fill="#f4f2fb"/></svg></div>
-        </div>
+    <div class="cv-gallery">
+      <div class="cv-item reveal">
+        <div class="cv-mock tilt-el" data-tilt="10"><img src="assets/cv-daniel.jpg?v=20260919" alt="Ejemplo de CV rediseñado con IA"></div>
         <div class="test-quote">
-          <p class="name">Verónica · Vero Vende, Rosario</p>
-          <p>"¡Muchas gracias Luminus! La página quedó hermosa, tal cual la imaginábamos. Ahora nuestros clientes ven todo el catálogo desde el celular y nos escriben directo por WhatsApp."</p>
+          <p class="name">Daniel</p>
+          <p>"Modifiqué mi CV con IA y empecé a conseguir entrevistas que antes ni me contestaban."</p>
         </div>
       </div>
-      <div class="test-card reveal">
-        <div class="video-frame">
-          <video src="assets/testimonio-clemente.mp4?v=20260927" poster="assets/poster-clemente.jpg?v=20260927" controls playsinline preload="metadata"></video>
-          <div class="play-badge"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="rgba(7,6,15,0.55)" stroke="url(#lineGrad5)" stroke-width="1.5"/><path d="M26 21 L45 32 L26 43 Z" fill="#f4f2fb"/></svg></div>
-        </div>
+      <div class="cv-item reveal">
+        <div class="cv-mock tilt-el" data-tilt="10"><img src="assets/cv-elena.jpg?v=20260919" alt="Ejemplo de CV rediseñado con IA"></div>
         <div class="test-quote">
-          <p class="name">Cristian · Clemente Lavandería, Rosario</p>
-          <p>"Súper agradecido con el trabajo. La web quedó clara y profesional, y ahora los clientes nos encuentran en internet y nos consultan sin vueltas."</p>
+          <p class="name">Elena</p>
+          <p>"Cambié mi perfil de LinkedIn siguiendo su asesoría y en dos semanas ya tenía tres procesos activos."</p>
         </div>
       </div>
-      <div class="test-card reveal">
-        <div class="video-frame">
-          <video src="assets/testimonio1.mp4?v=20260919" poster="assets/poster1.jpg?v=20260919" controls playsinline preload="metadata"></video>
-          <div class="play-badge"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="rgba(7,6,15,0.55)" stroke="url(#lineGrad5)" stroke-width="1.5"/><path d="M26 21 L45 32 L26 43 Z" fill="#f4f2fb"/></svg></div>
-        </div>
+      <div class="cv-item reveal">
+        <div class="cv-mock tilt-el" data-tilt="10"><img src="assets/cv-oscar.jpg?v=20260919" alt="Ejemplo de CV rediseñado con IA"></div>
         <div class="test-quote">
-          <p class="name">Alejandro · Jedis del Sur</p>
-          <p>"Tenía un negocio de importaciones pero me hacía falta una web. Vi la oferta, me pareció bastante accesible, y gracias a eso ya estoy vendiendo en todo el país."</p>
+          <p class="name">Óscar</p>
+          <p>"No sabía que un CV podía filtrarse por un bot. Ahora paso esa barrera y me llaman para entrevistas."</p>
         </div>
       </div>
     </div>
-    <div class="carousel-nav">
-      <button onclick="scrollCarousel(-1)" aria-label="Anterior">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button onclick="scrollCarousel(1)" aria-label="Siguiente">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="section-cta"><a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero una web como estas</a></div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div style="text-align:center; max-width:680px; margin: 0 auto 36px;" class="reveal">
-      <span class="eyebrow-dot" style="display:flex; justify-content:center;">Preguntas frecuentes</span>
-      <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem);">Lo que nos preguntan antes de empezar</h2>
-    </div>
-    <div class="faq-list">
-      <details class="reveal"><summary>¿Cuánto tarda en estar lista?</summary><p>Menos de 48 horas desde que nos pasás la información de tu negocio (textos, fotos y logo). Si no tenés todo listo, te ayudamos a armarlo.</p></details>
-      <details class="reveal"><summary>¿Puedo pedir cambios?</summary><p>Sí. Antes de publicarla ajustamos el diseño a tu gusto, hasta que quede como la imaginás.</p></details>
-      <details class="reveal"><summary>¿Qué incluye el precio?</summary><p>Diseño a medida de tu marca, registro de dominio, hosting, versión adaptada a celulares y botón directo a tu WhatsApp.</p></details>
-      <details class="reveal"><summary>¿Cómo se paga?</summary><p>$150.000 en un pago, o en 2 cuotas de $75.000 sin recargo.</p></details>
-      <details class="reveal"><summary>¿Trabajan con negocios de otras provincias?</summary><p>Sí, trabajamos con emprendimientos de toda Argentina. Todo el proceso es online y por WhatsApp.</p></details>
-      <details class="reveal"><summary>¿Y si después quiero actualizar la web?</summary><p>Podés hacerlo vos, o sumar el plan de mantenimiento mensual de $30.000 y nos encargamos de actualizar precios, fotos y contenido.</p></details>
-      <details class="reveal"><summary>¿Por qué solo 8 cupos por mes?</summary><p>Porque cada página la diseñamos a medida y queremos cumplir con la entrega en menos de 48 horas. Cuando se completan los cupos del mes, los nuevos proyectos pasan al mes siguiente.</p></details>
-    </div>
-    <div class="section-cta"><a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a><small data-cupos-text>Quedan 8 cupos este mes</small></div>
   </div>
 </section>
 
@@ -1214,28 +916,27 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
         </ul>
       </div>
       <div class="contact-cta">
-        <h3>Reservá tu cupo de este mes</h3>
-        <p>Contanos de tu negocio y en menos de 48 horas tenés tu página web lista. <span data-cupos-text style="color:#ffd98a; font-weight:700;">Quedan 8 cupos este mes</span></p>
-        <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a>
+        <h3>Mejoremos tu CV</h3>
+        <p>Contanos qué puesto buscás y optimizamos tu CV y tu LinkedIn con IA.</p>
+        <a href="https://wa.me/5493416514065?text=Hola%2C%20quiero%20info%20sobre%20la%20revisi%C3%B3n%20de%20CV%20y%20LinkedIn" class="btn-primary" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <a href="#inicio" class="brand"><img src="assets/logo-badge.png?v=20260919" alt="Luminus"></a>
-  <p>Luminus Agencia IA · Rosario, Santa Fe · Páginas web para emprendimientos de toda Argentina</p>
-  <p class="footer-cv">¿Querés conseguir más entrevistas? Conocé nuestro servicio de <a href="cvs.html">CVs y LinkedIn con IA</a>.</p>
+  <a href="index.html" class="brand"><img src="assets/logo-badge.png?v=20260919" alt="Luminus"></a>
+  <p>Luminus Agencia IA · Rosario, Santa Fe · Innovamos hoy, transformamos mañana</p>
   <a href="https://www.instagram.com/luminus_ia?igsi=MXFsM3Y4dXhvYzljaw==" class="social-ico" target="_blank" rel="noopener" aria-label="Seguinos en Instagram">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
   </a>
 </footer>
 
 <div class="float-stack">
-  <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20reservar%20mi%20cupo" class="wa-float" target="_blank" rel="noopener">
+  <a href="https://wa.me/5493416514065?text=Hola%2C%20quiero%20info%20sobre%20la%20revisi%C3%B3n%20de%20CV%20y%20LinkedIn" class="wa-float" target="_blank" rel="noopener">
     <div class="ring"></div>
     <svg width="22" height="22" viewBox="0 0 24 24" fill="#06170d"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h0a7.94 7.94 0 0 0 5.55-13.58zM12.05 18.4h0a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1 1 5.6 3.1zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.61.77-.23.15-.42.05a5.4 5.4 0 0 1-1.6-.98 5.98 5.98 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4s.2-.23.29-.35a1.3 1.3 0 0 0 .2-.33.37.37 0 0 0 0-.35c-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38a.72.72 0 0 0-.52.24 2.18 2.18 0 0 0-.68 1.62 3.8 3.8 0 0 0 .8 2 8.7 8.7 0 0 0 3.32 2.94c.46.2.83.32 1.11.4a2.67 2.67 0 0 0 1.23.08 2 2 0 0 0 1.32-.93 1.65 1.65 0 0 0 .11-.93c-.04-.09-.17-.14-.36-.24z"/></svg>
-    <span>Quiero mi web</span>
+    <span>¿Comenzamos?</span>
   </a>
 </div>
 
@@ -1247,22 +948,6 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
   function safe(fn, name){
     try{ fn(); } catch(err){ console.warn('[luminus]', name, 'failed:', err); }
   }
-
-  /* ---------- CUPOS DEL MES ----------
-     👉 Actualizá este número a mano cada vez que cerrás un proyecto nuevo.
-        El 1° de cada mes volvé a ponerlo en 8. */
-  var CUPOS_TOTALES = 8;
-  var CUPOS_RESTANTES = 8;
-  safe(function(){
-    var meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-    var hoy = new Date();
-    var mes = meses[hoy.getMonth()], sig = meses[(hoy.getMonth()+1)%12];
-    var n = Math.max(0, Math.min(CUPOS_TOTALES, CUPOS_RESTANTES));
-    var txt = n === 0 ? ('Cupos de ' + mes + ' completos · reservá para ' + sig)
-            : n === 1 ? ('¡Queda 1 solo cupo para ' + mes + '!')
-            : ('Quedan ' + n + ' cupos para ' + mes);
-    document.querySelectorAll('[data-cupos-text]').forEach(function(el){ el.textContent = txt; });
-  }, 'cupos');
 
   /* ---------- preloader ---------- */
   safe(function(){
