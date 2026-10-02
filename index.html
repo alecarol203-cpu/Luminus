@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luminus — Tu página web profesional lista en 48 horas | Toda Argentina</title>
-<meta name="description" content="Páginas web profesionales para emprendimientos de toda Argentina. Listas en menos de 48 horas, con dominio y hosting incluidos. $150.000 o 2 cuotas sin recargo.">
+<meta name="description" content="Páginas web profesionales para emprendimientos de toda Argentina. Listas en menos de 48 horas, con dominio y hosting incluidos. Landing page $150.000 o página con 2 secciones extra $250.000.">
 <link rel="icon" href="assets/logo.png?v=20260919">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -794,6 +794,54 @@
     .work-grid, .steps{ grid-template-columns: 1fr; max-width: 460px; }
   }
   .hero .sub.sub-strong{ max-width: 760px; font-size: clamp(1.2rem, 2.2vw, 1.55rem); font-weight: 700; color: var(--text); letter-spacing: 0.01em; }
+
+  /* ================= AVATAR EN LA PORTADA (v2026-10) ================= */
+  .hero-visual{
+    position: relative;
+    width: clamp(230px, 25vw, 340px);
+    margin: -20px auto 18px;
+    animation: logo-in 1.1s var(--ease) both;
+  }
+  .hero-visual::before{
+    content:''; position:absolute; left:50%; top:46%; width:118%; aspect-ratio:1;
+    transform: translate(-50%,-50%); border-radius:50%; z-index:-1; pointer-events:none;
+    background: radial-gradient(circle, rgba(139,111,245,0.42) 0%, rgba(79,195,247,0.14) 42%, transparent 68%);
+    filter: blur(8px);
+  }
+  #avatarCanvas{
+    display:block; width:100%; aspect-ratio: 560 / 540; height:auto;
+    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 98%);
+            mask-image: linear-gradient(to bottom, #000 70%, transparent 98%);
+  }
+  .hero-visual .hero-logo{
+    position:absolute; margin:0;
+    right: calc(100% + clamp(28px, 5vw, 80px));
+    top: calc(50% - 95px);
+  }
+  @media (max-width: 640px){
+    .hero-visual{ width: 220px; margin-top: -40px; }
+    .hero-visual .hero-logo{ width: 74px; height: 74px; top: auto; bottom: 28%; right: calc(100% + 4px); }
+  }
+
+  /* cursor personalizado: punto blanco + aro que se agranda sobre los botones */
+  .cursor-dot, .cursor-ring{ mix-blend-mode: difference; z-index: 400; }
+  .cursor-dot{ width:8px; height:8px; background:#fff; }
+  .cursor-ring{ width:38px; height:38px; border:1.5px solid #fff; transition: opacity .3s ease, width .3s var(--ease), height .3s var(--ease), background .3s ease; }
+  .cursor-ring.hovering{ width:74px; height:74px; border-color:#fff; background: rgba(255,255,255,0.12); }
+  @media (hover: hover) and (pointer: fine){
+    body.cursor-ready, body.cursor-ready a, body.cursor-ready button{ cursor: none; }
+  }
+
+  /* dos ofertas lado a lado */
+  #webs .pricing-inner{ grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+  #webs .price-card{ max-width: none; display:flex; flex-direction:column; }
+  #webs .price-card .btn-primary{ margin-top: auto; }
+  #webs .price-card .maintenance{ margin-bottom: 24px; }
+  .price-label{ display:inline-block; margin-top: 4px; padding: 5px 14px; border-radius: 100px; background: var(--grad-soft); border: 1px solid var(--line); color: var(--text); font-weight: 700; font-size: .9rem; align-self: flex-start; }
+  .price-card--plus{ background: linear-gradient(165deg, #2a2050, var(--surface-2) 60%); border-color: rgba(217,166,232,0.35); }
+  .plan-badge{ align-self: flex-start; margin-bottom: 14px; padding: 6px 14px; border-radius: 100px; background: var(--grad); color: #0a0716; font-weight: 800; font-size: .8rem; letter-spacing: .03em; }
+  .feature-plus{ color: var(--text); background: rgba(217,166,232,0.08); border: 1px solid rgba(217,166,232,0.25); border-radius: 12px; padding: 10px 12px; margin: 0 -12px; }
+  @media (max-width: 900px){ #webs .pricing-inner{ grid-template-columns: 1fr; } #webs .price-card{ max-width: 620px; margin: 0 auto; } }
 </style>
 
 <!-- Meta Pixel Code -->
@@ -879,7 +927,9 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
     <circle cx="720" cy="560" r="5" fill="#d9a6e8"/>
   </svg>
 
-  <img src="assets/logo-badge.png?v=20260919" alt="Luminus — Agencia IA" class="hero-logo parallax-el" data-depth="0.12">
+  <div class="hero-visual">
+    <canvas id="avatarCanvas" role="img" aria-label="Avatar de Alejandro que mira hacia el cursor"></canvas>
+  </div>
   <span class="hero-tag">Diseño web profesional · Toda Argentina</span>
   <h1>Tu página web profesional,<br><span class="grad-text">lista en menos de 48 horas.</span></h1>
   <p class="sub sub-strong">Hosting, dominio y diseño web acorde a tu marca.</p>
@@ -981,9 +1031,8 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
         <div class="price-row">
           <span class="price-old">$250.000</span>
           <span class="price-new grad-text">$150.000</span>
-          <span class="price-note">(o 2 cuotas de $75.000 sin recargo)</span>
         </div>
-        <p class="price-note">Precio de lanzamiento.</p>
+        <p class="price-label">Landing page</p>
         <ul class="feature-list">
           <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> <strong>Lista en menos de 48 horas</strong></li>
           <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Cambios a tu gusto hasta que quede como la imaginás</li>
@@ -998,75 +1047,30 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
         </div>
         <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1ginas%20web%20a%20%24150.000%20y%20quiero%20m%C3%A1s%20info" class="btn-primary" target="_blank" rel="noopener">Quiero mi página web</a>
       </div>
-      <svg class="laptop-mock reveal parallax-el tilt-el" data-tilt="6" data-depth="-0.03" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:100%; height:auto;">
-        <defs>
-          <linearGradient id="lapGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#4fc3f7"/>
-            <stop offset="55%" stop-color="#8b6ff5"/>
-            <stop offset="100%" stop-color="#d9a6e8"/>
-          </linearGradient>
-          <linearGradient id="lapBase" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#e7e6ee"/>
-            <stop offset="100%" stop-color="#c7c5d6"/>
-          </linearGradient>
-          <clipPath id="screenClip">
-            <rect x="56" y="42" width="528" height="282" rx="6"/>
-          </clipPath>
-          <clipPath id="lapLogoClip">
-            <circle cx="320" cy="126" r="32"/>
-          </clipPath>
-          <clipPath id="lapNavLogoClip">
-            <circle cx="77" cy="59" r="11"/>
-          </clipPath>
-        </defs>
-
-        <!-- shadow -->
-        <ellipse cx="320" cy="458" rx="250" ry="14" fill="#000" opacity="0.4"/>
-
-        <!-- keyboard base -->
-        <path d="M 20 372 L 620 372 L 588 428 L 52 428 Z" fill="url(#lapBase)" stroke="rgba(0,0,0,0.15)"/>
-        <path d="M 295 424 Q 320 431 345 424" stroke="#9a97ac" stroke-width="1.6" fill="none" opacity="0.7"/>
-        <rect x="40" y="364" width="560" height="8" rx="3" fill="#050506"/>
-
-        <!-- screen bezel -->
-        <rect x="40" y="16" width="560" height="352" rx="20" fill="#050506" stroke="rgba(150,140,220,0.28)" stroke-width="1.5"/>
-        <circle cx="320" cy="29" r="2.4" fill="#2c2a3d"/>
-
-        <!-- screen content (clipped) -->
-        <g clip-path="url(#screenClip)">
-          <rect x="56" y="42" width="528" height="282" fill="#07060f"/>
-
-          <!-- header -->
-          <rect x="56" y="42" width="528" height="30" fill="#0d0c1f"/>
-          <circle cx="77" cy="57" r="11" fill="url(#lapGrad)"/>
-          <image href="assets/logo-badge.png?v=20260919" xlink:href="assets/logo-badge.png?v=20260919" x="66" y="46" width="22" height="22" clip-path="url(#lapNavLogoClip)"/>
-          <text x="94" y="55" font-family="Unbounded, sans-serif" font-weight="700" font-size="8" fill="#f4f2fb">Luminus</text>
-          <text x="94" y="63" font-family="Manrope, sans-serif" font-weight="600" font-size="4.2" fill="#4fc3f7" letter-spacing="0.5">AGENCIA IA</text>
-          <text x="245" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Trabajos</text>
-          <text x="305" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Precio</text>
-          <text x="358" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Proceso</text>
-          <text x="418" y="60" font-family="Manrope, sans-serif" font-weight="600" font-size="6" fill="#a29fc4">Preguntas</text>
-          <rect x="466" y="49" width="104" height="16" rx="8" fill="url(#lapGrad)"/>
-          <text x="518" y="60" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="4.6" fill="#0a0716">Quiero mi página web</text>
-
-          <!-- hero -->
-          <circle cx="320" cy="126" r="42" fill="url(#lapGrad)" opacity="0.22"/>
-          <circle cx="320" cy="126" r="32" fill="url(#lapGrad)"/>
-          <image href="assets/logo-badge.png?v=20260919" xlink:href="assets/logo-badge.png?v=20260919" x="288" y="94" width="64" height="64" clip-path="url(#lapLogoClip)"/>
-          <rect x="256" y="166" width="128" height="13" rx="6.5" fill="rgba(150,140,220,0.16)" stroke="rgba(150,140,220,0.35)" stroke-width="0.6"/>
-          <text x="320" y="175" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="4.6" fill="#f4f2fb">Diseño web profesional</text>
-          <text x="320" y="198" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">Tu página web</text>
-          <text x="320" y="215" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">profesional,</text>
-          <text x="320" y="232" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="#f4f2fb">lista en menos</text>
-          <text x="320" y="253" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="700" font-size="13.5" fill="url(#lapGrad)">de 48 horas.</text>
-
-          <path d="M 90 90 L 130 90 L 155 115" stroke="url(#lapGrad)" stroke-width="1" fill="none" stroke-dasharray="3 5" opacity="0.6"/>
-          <path d="M 550 100 L 510 100 L 485 125" stroke="url(#lapGrad)" stroke-width="1" fill="none" stroke-dasharray="3 5" opacity="0.6"/>
-          <circle cx="155" cy="115" r="2.6" fill="#4fc3f7"/>
-          <circle cx="485" cy="125" r="2.6" fill="#d9a6e8"/>
-        </g>
-        <rect x="56" y="42" width="528" height="282" rx="6" fill="none" stroke="rgba(150,140,220,0.25)" stroke-width="1"/>
-      </svg>
+      <div class="price-card price-card--plus reveal tilt-el" data-tilt="8">
+        <span class="plan-badge">+2 secciones</span>
+        <h3>Página + Secciones</h3>
+        <p class="tag">Para negocios que necesitan mostrar más: tu página principal más 2 secciones propias, cada una con su enlace en el menú.</p>
+        <div class="price-row">
+          <span class="price-old">$300.000</span>
+          <span class="price-new grad-text">$250.000</span>
+        </div>
+        <p class="price-label">Landing page + 2 secciones extra</p>
+        <ul class="feature-list">
+          <li class="feature-plus"><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9a6e8" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg> <span><strong>2 secciones extra con su propio enlace en el menú</strong> (por ejemplo: Catálogo y Nosotros)</span></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> <strong>Lista en menos de 48 horas</strong></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Cambios a tu gusto hasta que quede como la imaginás</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Registro de dominio incluido</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Hosting incluido</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Diseño a medida de tu marca</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Adaptada a celulares y computadoras</li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Botón directo a tu WhatsApp</li>
+        </ul>
+        <div class="maintenance">
+          <strong>¿Vas a necesitar hacer cambios más adelante?</strong> Ofrecemos un plan de mantenimiento mensual por $30.000 para actualizar precios, imágenes y contenido. Si preferís manejarlo vos, te entregamos el sitio listo para promocionar tu marca desde el primer día.
+        </div>
+        <a href="https://wa.me/5493416514065?text=Hola%21%20Vi%20la%20promo%20de%20p%C3%A1gina%20web%20con%202%20secciones%20extra%20a%20%24250.000%20y%20quiero%20m%C3%A1s%20info" class="btn-primary" target="_blank" rel="noopener">Quiero la página + secciones</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1165,7 +1169,7 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
       <details class="reveal"><summary>¿Cuánto tarda en estar lista?</summary><p>Menos de 48 horas desde que nos pasás la información de tu negocio (textos, fotos y logo). Si no tenés todo listo, te ayudamos a armarlo.</p></details>
       <details class="reveal"><summary>¿Puedo pedir cambios?</summary><p>Sí. Antes de publicarla ajustamos el diseño a tu gusto, hasta que quede como la imaginás.</p></details>
       <details class="reveal"><summary>¿Qué incluye el precio?</summary><p>Diseño a medida de tu marca, registro de dominio, hosting, versión adaptada a celulares y botón directo a tu WhatsApp.</p></details>
-      <details class="reveal"><summary>¿Cómo se paga?</summary><p>$150.000 en un pago, o en 2 cuotas de $75.000 sin recargo.</p></details>
+      <details class="reveal"><summary>¿Cómo se paga?</summary><p>La landing page cuesta $150.000 y la página con 2 secciones extra, $250.000.</p></details>
       <details class="reveal"><summary>¿Trabajan con negocios de otras provincias?</summary><p>Sí, trabajamos con emprendimientos de toda Argentina. Todo el proceso es online y por WhatsApp.</p></details>
       <details class="reveal"><summary>¿Y si después quiero actualizar la web?</summary><p>Podés hacerlo vos, o sumar el plan de mantenimiento mensual de $30.000 y nos encargamos de actualizar precios, fotos y contenido.</p></details>
     </div>
@@ -1430,6 +1434,98 @@ src="https://www.facebook.com/tr?id=2270054587147360&ev=PageView&noscript=1"
       });
     }
   }, 'pixel-contact-events');
+})();
+</script>
+
+<script>
+/* ===== Avatar de la portada: la cabeza sigue al cursor (fotogramas en canvas) ===== */
+(function(){
+  "use strict";
+  var INFO = {"count": 64, "width": 560, "height": 540, "faceX": 280, "faceY": 185};
+  var BASE = 'public/frames/';
+  var N = INFO.count, STEP = 360 / N;
+  var hero = document.getElementById('inicio');
+  var canvas = document.getElementById('avatarCanvas');
+  if(!hero || !canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+
+  function src(name){ return (window.FRAME_DATA && window.FRAME_DATA[name]) || (BASE + name); }
+
+  /* --- precarga --- */
+  var frames = [], ready = [], centro = new Image(), centroReady = false, dirty = true;
+  function load(img, name, done){
+    img.decoding = 'async';
+    img.onload = function(){ (img.decode ? img.decode() : Promise.resolve()).catch(function(){}).then(done); };
+    img.src = src(name);
+  }
+  load(centro, 'centro.webp', function(){ centroReady = true; dirty = true; });
+  for (var k = 0; k < N; k++) (function(k){
+    frames[k] = new Image();
+    load(frames[k], (k < 10 ? '0' : '') + k + '.webp', function(){ ready[k] = true; });
+  })(k);
+
+  /* --- tamaño del canvas --- */
+  var cw = 0, ch = 0, s = 1, dpr = 1;
+  function layout(){
+    var r = canvas.getBoundingClientRect();
+    cw = r.width; ch = r.height; s = cw / INFO.width;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(cw * dpr); canvas.height = Math.round(ch * dpr);
+    dirty = true;
+  }
+
+  /* --- puntero (mouse en toda la ventana, dedo sobre la portada) --- */
+  var hasPointer = false, mx = 0, my = 0;
+  window.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; hasPointer = true; }, { passive: true });
+  document.addEventListener('mouseleave', function(){ hasPointer = false; });
+  window.addEventListener('blur', function(){ hasPointer = false; });
+  function touch(e){ var t = e.touches[0]; if(t){ mx = t.clientX; my = t.clientY; hasPointer = true; } }
+  hero.addEventListener('touchstart', touch, { passive: true });
+  hero.addEventListener('touchmove', touch, { passive: true });
+  hero.addEventListener('touchend', function(){ hasPointer = false; }, { passive: true });
+  hero.addEventListener('touchcancel', function(){ hasPointer = false; }, { passive: true });
+
+  /* --- bucle --- */
+  var cur = 0, wasCenter = true, shown = -2, last = performance.now(), visible = true;
+  function draw(idx){
+    var img = idx < 0 ? centro : frames[idx];
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.globalAlpha = 1;                    // un solo fotograma, nunca se mezclan
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, 0, 0, cw, ch);
+    shown = idx;
+  }
+  function tick(now){
+    var dt = Math.min(0.1, (now - last) / 1000); last = now;
+    if (visible){
+      var idx = -1;
+      if (hasPointer){
+        var r = canvas.getBoundingClientRect();
+        var fx = r.left + INFO.faceX * s, fy = r.top + INFO.faceY * s;
+        var dx = mx - fx, dy = my - fy, nearR = 120 * s;
+        if (dx * dx + dy * dy > nearR * nearR){
+          var target = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360;
+          if (wasCenter) cur = target;                       // sin barrido al salir del centro
+          else {
+            var diff = ((target - cur + 540) % 360) - 180;   // camino más corto
+            cur = (cur + diff * (1 - Math.exp(-dt / 0.05)) + 360) % 360;
+          }
+          wasCenter = false;
+          idx = Math.round(cur / STEP) % N;
+          if (!ready[idx]) idx = (shown >= 0 && ready[shown]) ? shown : -1;
+        } else wasCenter = true;
+      } else wasCenter = true;
+      if ((idx !== shown || dirty) && (idx >= 0 || centroReady)){ draw(idx); dirty = false; }
+    }
+    requestAnimationFrame(tick);
+  }
+  layout();
+  window.addEventListener('resize', layout);
+  if ('ResizeObserver' in window) new ResizeObserver(layout).observe(canvas);
+  if ('IntersectionObserver' in window)
+    new IntersectionObserver(function(en){ visible = en[0].isIntersecting; if (visible) dirty = true; }).observe(hero);
+  requestAnimationFrame(tick);
 })();
 </script>
 
